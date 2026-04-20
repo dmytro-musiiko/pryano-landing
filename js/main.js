@@ -33,11 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- SHOWCASE HORIZONTAL SCROLL ---
     const showcaseScroll = document.getElementById('showcase-scroll');
     if (showcaseScroll) {
-        const step = 324; // card width + gap
+        const getStep = () => {
+            const card = showcaseScroll.querySelector('.pack-card');
+            if (!card) return 300;
+            const gap = parseFloat(getComputedStyle(showcaseScroll).columnGap) || 24;
+            return card.offsetWidth + gap;
+        };
         document.querySelectorAll('.showcase__btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const dir = btn.getAttribute('data-scroll') === 'prev' ? -1 : 1;
-                showcaseScroll.scrollBy({ left: step * dir, behavior: 'smooth' });
+                showcaseScroll.scrollBy({ left: getStep() * dir, behavior: 'smooth' });
             });
         });
     }
@@ -86,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- REVEAL ON SCROLL ---
     const revealTargets = document.querySelectorAll(`
         .section-label, .section-title, .section-subtitle,
-        .about__desc, .about__stats, .about__image, .about__badge,
+        .about__desc, .about__stats,
         .category-card, .pack-card, .advantage-card,
         .feature-strip__item, .cta__content, .cta__pepper,
         .contact__item, .contact__form, .hero__feature,

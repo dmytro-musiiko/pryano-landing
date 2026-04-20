@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -378,7 +378,11 @@
             </div>
 
             <div class="catalog__note">
-                <span>Мінімальне замовлення при фасовці від 0,5 кг — <b>1000 грн</b>, при фасовці від 0,05 кг — <b>300 грн</b>. Можлива фасовка у прозорі колби з дозатором.</span>
+                <div class="catalog__note-rows">
+                    <div class="catalog__note-row"><span>Мін. замовлення від <b>0,5 кг</b></span><span class="catalog__note-sep">—</span><span><b>1000 грн</b></span></div>
+                    <div class="catalog__note-row"><span>Мін. замовлення від <b>0,05 кг</b></span><span class="catalog__note-sep">—</span><span><b>300 грн</b></span></div>
+                </div>
+                <p class="catalog__note-foot">Можлива фасовка у прозорі колби з дозатором.</p>
             </div>
         </div>
     </section>
@@ -643,6 +647,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=5"></script>
 </body>
 </html>
