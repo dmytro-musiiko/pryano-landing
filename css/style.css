@@ -1579,7 +1579,7 @@ a.contact__value:hover { color: var(--red); }
         padding-bottom: 32px;
     }
     .footer__brand { grid-column: 1 / -1; margin-bottom: 4px; text-align: left; display: flex; flex-direction: column; align-items: flex-start; }
-    .footer__top .footer__nav { text-align: center; align-items: center; }
+    .footer__top .footer__nav { text-align: left; align-items: flex-start; }
     .footer__top .footer__nav:last-child { grid-column: 1 / -1; }
     .footer__heading { margin-bottom: 12px; font-size: 0.78rem; letter-spacing: 1.5px; }
     .footer__nav { gap: 8px; }
