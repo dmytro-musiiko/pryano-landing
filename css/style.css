@@ -1417,11 +1417,12 @@ a.contact__value:hover { color: var(--red); }
     .hero__desc { margin-left: auto; margin-right: auto; }
     .hero__actions, .hero__features { justify-content: center; }
     .hero__features { grid-template-columns: repeat(2, max-content); margin: 0 auto; }
-    .hero__visual { min-height: 254px; height: 254px; margin-top: 40px; }
+    .hero { padding: 110px 0 30px; }
+    .hero__visual { min-height: 240px; height: 240px; margin-top: 16px; }
     .pack-photo { width: 220px; }
-    .hero__stack { transform: none; margin: 0 auto; width: 300px; height: 220px; }
-    .hero__stack-pack { width: 130px; filter: none; }
-    .hero__stack-pack--center { width: 160px; }
+    .hero__stack { transform: none; margin: 0 auto; width: 320px; height: 240px; }
+    .hero__stack-pack { width: 150px; filter: none; }
+    .hero__stack-pack--center { width: 185px; }
     .hero__stack-pack { opacity: 0; }
     .hero__stack-pack--left { transform: translate(-50%, -50%) rotate(-8deg); }
     .hero__stack-pack--center { transform: translate(-50%, -50%) rotate(0); }
