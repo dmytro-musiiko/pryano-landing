@@ -30,6 +30,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- SHOWCASE HORIZONTAL SCROLL ---
+    const showcaseScroll = document.getElementById('showcase-scroll');
+    if (showcaseScroll) {
+        const step = 324; // card width + gap
+        document.querySelectorAll('.showcase__btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dir = btn.getAttribute('data-scroll') === 'prev' ? -1 : 1;
+                showcaseScroll.scrollBy({ left: step * dir, behavior: 'smooth' });
+            });
+        });
+    }
+
+    // --- CATALOG ACCORDION ---
+    const openCatalogBlock = (block) => {
+        if (!block || !block.classList.contains('catalog__block')) return;
+        block.classList.add('is-open');
+        const head = block.querySelector('.catalog__head');
+        if (head) head.setAttribute('aria-expanded', 'true');
+    };
+
+    document.querySelectorAll('.catalog__block').forEach(block => {
+        const head = block.querySelector('.catalog__head');
+        if (!head) return;
+        head.addEventListener('click', () => {
+            const isOpen = block.classList.toggle('is-open');
+            head.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    });
+
     // --- SMOOTH SCROLL ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
@@ -38,10 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
+                if (target.classList && target.classList.contains('catalog__block')) {
+                    openCatalogBlock(target);
+                }
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
+
+    // Open matching catalog block if page loaded with hash like #cat-mixes
+    if (window.location.hash) {
+        const initial = document.querySelector(window.location.hash);
+        if (initial && initial.classList && initial.classList.contains('catalog__block')) {
+            openCatalogBlock(initial);
+        }
+    }
 
     // --- REVEAL ON SCROLL ---
     const revealTargets = document.querySelectorAll(`

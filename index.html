@@ -52,7 +52,7 @@
                 </div>
                 <div class="hero__features">
                     <div class="hero__feature">
-                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2C7 5 6 8 6 11a4 4 0 008 0c0-3-1-6-4-9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 11c0-1.5 1-3 2.5-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2C6 5 3 8 3 11A7 7 0 0 0 17 11C17 8 14 5 10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 13c0-1.8 1.2-3.5 3-4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
                         Натуральний склад
                     </div>
                     <div class="hero__feature">
@@ -71,18 +71,11 @@
             </div>
 
             <div class="hero__visual">
-                <figure class="pack-photo hero__pack hero__pack--1">
-                    <img src="images/pack-1.png" alt="PRYANO — Суміш перців">
-                    <figcaption>Суміш перців</figcaption>
-                </figure>
-                <figure class="pack-photo hero__pack hero__pack--2">
-                    <img src="images/pack-2.png" alt="PRYANO — Перець чорний">
-                    <figcaption>Перець чорний</figcaption>
-                </figure>
-                <figure class="pack-photo hero__pack hero__pack--3">
-                    <img src="images/pack-3.png" alt="PRYANO — Куркума">
-                    <figcaption>Куркума</figcaption>
-                </figure>
+                <div class="hero__stack">
+                    <img src="images/pack-3.png" alt="PRYANO — Куркума" class="hero__stack-pack hero__stack-pack--left">
+                    <img src="images/pack-1.png" alt="PRYANO — Суміш перців" class="hero__stack-pack hero__stack-pack--center">
+                    <img src="images/pack-2.png" alt="PRYANO — Перець чорний" class="hero__stack-pack hero__stack-pack--right">
+                </div>
             </div>
         </div>
     </section>
@@ -163,14 +156,10 @@
             <div class="about__grid">
                 <div class="about__images">
                     <div class="about__image about__image--big">
-                        <img src="https://images.pexels.com/photos/1340116/pexels-photo-1340116.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Спеції" loading="lazy">
+                        <img src="images/about-big.png" alt="Спеції" loading="lazy">
                     </div>
                     <div class="about__image about__image--small">
-                        <img src="https://images.pexels.com/photos/4198930/pexels-photo-4198930.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Суміш спецій" loading="lazy">
-                    </div>
-                    <div class="about__badge">
-                        <div class="about__badge-num">60<span>g</span></div>
-                        <div class="about__badge-text">фасовка<br>в кожному пакеті</div>
+                        <img src="images/about-small.png" alt="Суміш спецій" loading="lazy">
                     </div>
                 </div>
 
@@ -252,77 +241,22 @@
     </section>
 
     <!-- PRODUCTS SHOWCASE (packs row) -->
-    <section class="showcase" id="showcase">
-        <div class="container">
-            <div class="section-header section-header--center">
-                <p class="section-label">Лінійка смаків</p>
-                <h2 class="section-title">Обрані суміші PRYANO</h2>
-                <p class="section-subtitle">Готові пряні композиції в зручній упаковці 60 г</p>
-            </div>
-
-            <div class="showcase__grid">
-                <article class="pack-card">
-                    <figure class="pack-photo"><img src="images/showcase-2.png" alt="PRYANO — Суміш перців"></figure>
-                    <div class="pack-card__info">
-                        <h3>Суміш перців</h3>
-                        <p>Пікантна композиція п'яти перців</p>
-                    </div>
-                </article>
-                <article class="pack-card">
-                    <figure class="pack-photo"><img src="images/showcase-4.png" alt="PRYANO — До курки"></figure>
-                    <div class="pack-card__info">
-                        <h3>До курки</h3>
-                        <p>Підкреслює смак курятини</p>
-                    </div>
-                </article>
-                <article class="pack-card">
-                    <figure class="pack-photo"><img src="images/showcase-1.png" alt="PRYANO — До овочів"></figure>
-                    <div class="pack-card__info">
-                        <h3>До овочів</h3>
-                        <p>Часник, цибуля, морква, трави та паприка</p>
-                    </div>
-                </article>
-                <article class="pack-card">
-                    <figure class="pack-photo"><img src="images/showcase-5.png" alt="PRYANO — Куркума"></figure>
-                    <div class="pack-card__info">
-                        <h3>Куркума</h3>
-                        <p>Мелений корінь куркуми</p>
-                    </div>
-                </article>
-                <article class="pack-card">
-                    <figure class="pack-photo"><img src="images/showcase-3.png" alt="PRYANO — Перець чорний"></figure>
-                    <div class="pack-card__info">
-                        <h3>Перець чорний</h3>
-                        <p>Класичний смак перцю</p>
-                    </div>
-                </article>
-                <article class="pack-card">
-                    <figure class="pack-photo"><img src="images/showcase-6.png" alt="PRYANO — Для грилю"></figure>
-                    <div class="pack-card__info">
-                        <h3>Для грилю</h3>
-                        <p>Для гриля та барбекю</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <!-- CATALOG -->
     <section class="catalog" id="catalog">
         <div class="container">
             <div class="section-header section-header--center">
                 <p class="section-label">Каталог</p>
                 <h2 class="section-title">Повний асортимент з цінами</h2>
-                <p class="section-subtitle">Ціни за кг • Фасовка від 0,5 кг (мін. замовлення 1000 грн) та від 0,05 кг (мін. замовлення 300 грн)</p>
             </div>
 
             <!-- SPICES & VEGETABLES -->
             <div class="catalog__block" id="cat-spices">
-                <div class="catalog__head" style="--accent:#E94B2B;">
+                <button type="button" class="catalog__head" style="--accent:#E94B2B;" aria-expanded="false" aria-controls="cat-spices-table">
                     <h3 class="catalog__title">Спеції та сушені овочі</h3>
                     <span class="catalog__badge">24 позиції</span>
-                </div>
-                <div class="catalog__table">
+                    <svg class="catalog__chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="catalog__table" id="cat-spices-table">
                     <div class="catalog__row catalog__row--head">
                         <span>Найменування</span>
                         <span>Від 0,5 кг (грн)</span>
@@ -358,11 +292,12 @@
 
             <!-- HERBS -->
             <div class="catalog__block" id="cat-herbs">
-                <div class="catalog__head" style="--accent:#7BA05D;">
+                <button type="button" class="catalog__head" style="--accent:#7BA05D;" aria-expanded="false" aria-controls="cat-herbs-table">
                     <h3 class="catalog__title">Трави</h3>
                     <span class="catalog__badge">10 позицій</span>
-                </div>
-                <div class="catalog__table">
+                    <svg class="catalog__chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="catalog__table" id="cat-herbs-table">
                     <div class="catalog__row catalog__row--head">
                         <span>Найменування</span>
                         <span>Від 0,5 кг (грн)</span>
@@ -383,11 +318,12 @@
 
             <!-- MIXES -->
             <div class="catalog__block" id="cat-mixes">
-                <div class="catalog__head" style="--accent:#D9B44A;">
+                <button type="button" class="catalog__head" style="--accent:#D9B44A;" aria-expanded="false" aria-controls="cat-mixes-table">
                     <h3 class="catalog__title">Приправи та суміші</h3>
                     <span class="catalog__badge">27 позицій</span>
-                </div>
-                <div class="catalog__table">
+                    <svg class="catalog__chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="catalog__table" id="cat-mixes-table">
                     <div class="catalog__row catalog__row--head">
                         <span>Найменування</span>
                         <span>Від 0,5 кг (грн)</span>
@@ -425,11 +361,12 @@
 
             <!-- BERRIES -->
             <div class="catalog__block" id="cat-berries">
-                <div class="catalog__head" style="--accent:#111111;">
+                <button type="button" class="catalog__head" style="--accent:#111111;" aria-expanded="false" aria-controls="cat-berries-table">
                     <h3 class="catalog__title">Ягоди</h3>
                     <span class="catalog__badge">2 позиції</span>
-                </div>
-                <div class="catalog__table">
+                    <svg class="catalog__chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="catalog__table" id="cat-berries-table">
                     <div class="catalog__row catalog__row--head">
                         <span>Найменування</span>
                         <span>Від 0,5 кг (грн)</span>
@@ -441,9 +378,88 @@
             </div>
 
             <div class="catalog__note">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v5M12 16.5v.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 <span>Мінімальне замовлення при фасовці від 0,5 кг — <b>1000 грн</b>, при фасовці від 0,05 кг — <b>300 грн</b>. Можлива фасовка у прозорі колби з дозатором.</span>
             </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label">Лінійка смаків</p>
+                <h2 class="section-title">Обрані суміші PRYANO</h2>
+                <p class="section-subtitle">Готові пряні композиції в зручній упаковці 60 г</p>
+            </div>
+        </div>
+
+        <div class="showcase__shell">
+            <div class="showcase__scroll" id="showcase-scroll">
+                <article class="pack-card" style="--accent:var(--red);">
+                    <span class="pack-card__num">01</span>
+                    <figure class="pack-photo"><img src="images/showcase-2.png" alt="PRYANO — Суміш перців"></figure>
+                    <div class="pack-card__divider"></div>
+                    <div class="pack-card__info">
+                        <h3>Суміш перців</h3>
+                        <p>Пікантна композиція п'яти перців</p>
+                    </div>
+                </article>
+                <article class="pack-card" style="--accent:var(--orange);">
+                    <span class="pack-card__num">02</span>
+                    <figure class="pack-photo"><img src="images/showcase-4.png" alt="PRYANO — До курки"></figure>
+                    <div class="pack-card__divider"></div>
+                    <div class="pack-card__info">
+                        <h3>До курки</h3>
+                        <p>Підкреслює смак курятини</p>
+                    </div>
+                </article>
+                <article class="pack-card" style="--accent:var(--green);">
+                    <span class="pack-card__num">03</span>
+                    <figure class="pack-photo"><img src="images/showcase-1.png" alt="PRYANO — До овочів"></figure>
+                    <div class="pack-card__divider"></div>
+                    <div class="pack-card__info">
+                        <h3>До овочів</h3>
+                        <p>Часник, цибуля, морква, трави та паприка</p>
+                    </div>
+                </article>
+                <article class="pack-card" style="--accent:#B8902D;">
+                    <span class="pack-card__num">04</span>
+                    <figure class="pack-photo"><img src="images/showcase-5.png" alt="PRYANO — Куркума"></figure>
+                    <div class="pack-card__divider"></div>
+                    <div class="pack-card__info">
+                        <h3>Куркума</h3>
+                        <p>Мелений корінь куркуми</p>
+                    </div>
+                </article>
+                <article class="pack-card" style="--accent:var(--dark-accent);">
+                    <span class="pack-card__num">05</span>
+                    <figure class="pack-photo"><img src="images/showcase-3.png" alt="PRYANO — Перець чорний"></figure>
+                    <div class="pack-card__divider"></div>
+                    <div class="pack-card__info">
+                        <h3>Перець чорний</h3>
+                        <p>Класичний смак перцю</p>
+                    </div>
+                </article>
+                <article class="pack-card" style="--accent:var(--burgundy);">
+                    <span class="pack-card__num">06</span>
+                    <figure class="pack-photo"><img src="images/showcase-6.png" alt="PRYANO — Для грилю"></figure>
+                    <div class="pack-card__divider"></div>
+                    <div class="pack-card__info">
+                        <h3>Для грилю</h3>
+                        <p>Для гриля та барбекю</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="showcase__controls">
+                <button class="showcase__btn" data-scroll="prev" aria-label="Попередня">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button class="showcase__btn" data-scroll="next" aria-label="Наступна">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+            <p class="showcase__hint">← Гортай, щоб побачити всі суміші →</p>
         </div>
     </section>
 
@@ -555,18 +571,15 @@
                         </div>
                         <div>
                             <p class="contact__label">Адреса</p>
-                            <p class="contact__value">Україна, м. Дніпро, вул. Смакова, 1</p>
+                            <p class="contact__value">Україна, м. Черкаси, вул. Захисників Азовсталі, 7</p>
                         </div>
                     </div>
                     <div class="contact__socials">
-                        <a href="#" class="contact__social" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                        <a href="#" class="contact__social" aria-label="Viber">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 1.5c-5.3 0-9.6 4-9.6 9 0 1.6.5 3.1 1.3 4.4-.3 1.2-.8 2.8-.9 3.2-.1.3.1.6.4.5.4-.2 2.2-.9 3.3-1.4 1.7.9 3.6 1.4 5.5 1.4 5.3 0 9.6-4 9.6-9s-4.3-9-9.6-9zm0 16.2c-1.8 0-3.4-.5-4.9-1.4l-.3-.2-2.2.9.7-2.3-.2-.3c-.9-1.3-1.4-2.8-1.4-4.3 0-4.1 3.6-7.5 8.2-7.5s8.2 3.4 8.2 7.5c.1 4.1-3.6 7.6-8.1 7.6zm4.7-5.6c-.2-.1-1.5-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.3-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5s.2-.3.3-.5c.1-.1.1-.3.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.6 1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.2-.3-.2-.5-.3z"/></svg>
                         </a>
                         <a href="#" class="contact__social" aria-label="Telegram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 3L9 13M21 3l-7 18-4-8-8-4 18-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-                        </a>
-                        <a href="#" class="contact__social" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
                         </a>
                     </div>
                 </div>
@@ -620,7 +633,7 @@
                     <h4 class="footer__heading">Контакти</h4>
                     <a href="tel:+380000000000">+380 (XX) XXX-XX-XX</a>
                     <a href="mailto:info@pryano.com.ua">info@pryano.com.ua</a>
-                    <a href="#">м. Дніпро, вул. Смакова, 1</a>
+                    <a href="#">м. Черкаси, вул. Захисників Азовсталі, 7</a>
                 </div>
             </div>
             <div class="footer__bottom">
