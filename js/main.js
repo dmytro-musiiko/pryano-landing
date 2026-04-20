@@ -134,6 +134,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(s => navObserver.observe(s));
 
+    // --- HERO STACK SPREAD ON MOBILE ---
+    const heroStack = document.querySelector('.hero__stack');
+    const isMobile = window.matchMedia('(max-width: 1024px)');
+    if (heroStack && isMobile.matches) {
+        const stackObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => heroStack.classList.add('is-spread'), 200);
+                    stackObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.35 });
+        stackObserver.observe(heroStack);
+    }
+
     // --- FORM SUBMIT STUB ---
     const form = document.querySelector('.contact__form');
     if (form) {
