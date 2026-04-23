@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=8">
+    <link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -89,10 +89,21 @@
             </div>
 
             <div class="hero__visual">
-                <div class="hero__stack">
-                    <img src="images/pack-3.png" alt="PRYANO — Куркума" class="hero__stack-pack hero__stack-pack--left">
-                    <img src="images/pack-1.png" alt="PRYANO — Суміш перців" class="hero__stack-pack hero__stack-pack--center">
-                    <img src="images/pack-2.png" alt="PRYANO — Перець чорний" class="hero__stack-pack hero__stack-pack--right">
+                <div class="hero__stack" data-variant="packs">
+                    <div class="hero__toggle" role="tablist" aria-label="Формат упаковки">
+                        <button type="button" class="hero__toggle-btn is-active" data-variant="packs" role="tab" aria-selected="true">Саше</button>
+                        <button type="button" class="hero__toggle-btn" data-variant="jars" role="tab" aria-selected="false">Банка</button>
+                    </div>
+                    <div class="hero__variant hero__variant--packs">
+                        <img src="images/pack-3.png" alt="PRYANO — Куркума" class="hero__stack-pack hero__stack-pack--left">
+                        <img src="images/pack-1.png" alt="PRYANO — Суміш перців" class="hero__stack-pack hero__stack-pack--center">
+                        <img src="images/pack-2.png" alt="PRYANO — Перець чорний" class="hero__stack-pack hero__stack-pack--right">
+                    </div>
+                    <div class="hero__variant hero__variant--jars">
+                        <img src="images/jar-vegetables.png" alt="PRYANO — До овочів у банці" class="hero__stack-jar hero__stack-jar--left">
+                        <img src="images/jar-peppers.png" alt="PRYANO — Суміш перців у банці" class="hero__stack-jar hero__stack-jar--center">
+                        <img src="images/jar-black-pepper.png" alt="PRYANO — Перець чорний у банці" class="hero__stack-jar hero__stack-jar--right">
+                    </div>
                 </div>
             </div>
         </div>
@@ -665,6 +676,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
 </body>
 </html>

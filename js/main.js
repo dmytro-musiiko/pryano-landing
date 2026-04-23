@@ -149,6 +149,24 @@ document.addEventListener('DOMContentLoaded', () => {
         stackObserver.observe(heroStack);
     }
 
+    // --- HERO VARIANT TOGGLE (packs ↔ jars) ---
+    if (heroStack) {
+        const toggleBtns = heroStack.querySelectorAll('.hero__toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const variant = btn.dataset.variant;
+                if (!variant || heroStack.dataset.variant === variant) return;
+                heroStack.dataset.variant = variant;
+                toggleBtns.forEach(b => {
+                    const active = b === btn;
+                    b.classList.toggle('is-active', active);
+                    b.setAttribute('aria-selected', active ? 'true' : 'false');
+                });
+            });
+        });
+    }
+
     // --- FORM SUBMIT STUB ---
     const form = document.querySelector('.contact__form');
     if (form) {

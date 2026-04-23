@@ -365,6 +365,68 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .hero__stack:hover .hero__stack-pack--center { transform: translate(-50%, -50%) rotate(0) scale(1.05); }
 .hero__stack:hover .hero__stack-pack--right { transform: translate(15%, -50%) rotate(12deg); }
 
+/* Jar variant in hero */
+.hero__stack-jar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: auto;
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease;
+    filter: drop-shadow(0 20px 40px rgba(17,17,17,0.2));
+}
+.hero__stack-jar--left { transform: translate(-50%, -50%) rotate(-8deg); z-index: 1; opacity: 0; }
+.hero__stack-jar--center { transform: translate(-50%, -50%) rotate(0); z-index: 3; width: 175px; }
+.hero__stack-jar--right { transform: translate(-50%, -50%) rotate(8deg); z-index: 2; opacity: 0; }
+.hero__stack:hover .hero__stack-jar--left { transform: translate(-115%, -50%) rotate(-12deg); opacity: 1; }
+.hero__stack:hover .hero__stack-jar--center { transform: translate(-50%, -50%) rotate(0) scale(1.05); }
+.hero__stack:hover .hero__stack-jar--right { transform: translate(15%, -50%) rotate(12deg); opacity: 1; }
+
+/* Variant wrappers — fade between packs and jars */
+.hero__variant {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.5s ease;
+}
+.hero__stack[data-variant="packs"] .hero__variant--jars,
+.hero__stack[data-variant="jars"] .hero__variant--packs {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Toggle pill above stack */
+.hero__toggle {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    gap: 2px;
+    padding: 4px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(17,17,17,0.08);
+    z-index: 10;
+    cursor: default;
+}
+.hero__toggle-btn {
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.hero__toggle-btn:hover { color: var(--text); }
+.hero__toggle-btn.is-active {
+    background: var(--red);
+    color: var(--white);
+}
+.hero__toggle-btn.is-active:hover { color: var(--white); }
+
 /* ============================================
    PACK-PHOTO — real package image card
    ============================================ */
@@ -1423,14 +1485,14 @@ a.contact__value:hover { color: var(--red); }
     .hero__stack { transform: none; margin: 0 auto; width: 320px; height: 240px; }
     .hero__stack-pack { width: 150px; filter: none; }
     .hero__stack-pack--center { width: 185px; }
-    .hero__stack-pack { opacity: 0; }
-    .hero__stack-pack--left { transform: translate(-50%, -50%) rotate(-8deg); }
+    .hero__stack-pack--left { transform: translate(-115%, -50%) rotate(-12deg); }
     .hero__stack-pack--center { transform: translate(-50%, -50%) rotate(0); }
-    .hero__stack-pack--right { transform: translate(-50%, -50%) rotate(8deg); }
-    .hero__stack.is-spread .hero__stack-pack { opacity: 1; }
-    .hero__stack.is-spread .hero__stack-pack--left { transform: translate(-115%, -50%) rotate(-12deg); }
-    .hero__stack.is-spread .hero__stack-pack--center { transform: translate(-50%, -50%) rotate(0); }
-    .hero__stack.is-spread .hero__stack-pack--right { transform: translate(15%, -50%) rotate(12deg); }
+    .hero__stack-pack--right { transform: translate(15%, -50%) rotate(12deg); }
+    .hero__stack-jar { width: 82px; filter: none; }
+    .hero__stack-jar--center { width: 118px; }
+    .hero__stack-jar--left { transform: translate(-115%, -50%) rotate(-12deg); opacity: 1; }
+    .hero__stack-jar--center { transform: translate(-50%, -50%) rotate(0); }
+    .hero__stack-jar--right { transform: translate(15%, -50%) rotate(12deg); opacity: 1; }
     .hero__deco--tl {
         width: 100%; height: 100%; top: 0; left: 0; opacity: 0.18;
         object-fit: cover;
@@ -1516,10 +1578,12 @@ a.contact__value:hover { color: var(--red); }
     .hero__stack { width: 320px; height: 380px; }
     .hero__stack-pack { width: 180px; }
     .hero__stack-pack--center { width: 210px; }
-    .hero__stack-pack--left { transform: translate(-50%, -50%) rotate(-8deg); }
-    .hero__stack-pack--right { transform: translate(-50%, -50%) rotate(8deg); }
-    .hero__stack.is-spread .hero__stack-pack--left { transform: translate(-100%, -50%) rotate(-10deg); }
-    .hero__stack.is-spread .hero__stack-pack--right { transform: translate(0%, -50%) rotate(10deg); }
+    .hero__stack-pack--left { transform: translate(-100%, -50%) rotate(-10deg); }
+    .hero__stack-pack--right { transform: translate(0%, -50%) rotate(10deg); }
+    .hero__stack-jar { width: 96px; }
+    .hero__stack-jar--center { width: 138px; }
+    .hero__stack-jar--left { transform: translate(-100%, -50%) rotate(-10deg); opacity: 1; }
+    .hero__stack-jar--right { transform: translate(0%, -50%) rotate(10deg); opacity: 1; }
     .section-header { margin-bottom: 32px; }
     .section-subtitle { font-size: 0.95rem; }
     .cta { padding: 80px 0; }
@@ -1597,10 +1661,12 @@ a.contact__value:hover { color: var(--red); }
     .hero__stack { width: 280px; height: 340px; }
     .hero__stack-pack { width: 160px; }
     .hero__stack-pack--center { width: 190px; }
-    .hero__stack-pack--left { transform: translate(-50%, -50%) rotate(-8deg); }
-    .hero__stack-pack--right { transform: translate(-50%, -50%) rotate(8deg); }
-    .hero__stack.is-spread .hero__stack-pack--left { transform: translate(-95%, -50%) rotate(-10deg); }
-    .hero__stack.is-spread .hero__stack-pack--right { transform: translate(-5%, -50%) rotate(10deg); }
+    .hero__stack-pack--left { transform: translate(-95%, -50%) rotate(-10deg); }
+    .hero__stack-pack--right { transform: translate(-5%, -50%) rotate(10deg); }
+    .hero__stack-jar { width: 84px; }
+    .hero__stack-jar--center { width: 120px; }
+    .hero__stack-jar--left { transform: translate(-95%, -50%) rotate(-10deg); opacity: 1; }
+    .hero__stack-jar--right { transform: translate(-5%, -50%) rotate(10deg); opacity: 1; }
     .hero__badge { font-size: 0.76rem; padding: 8px 14px; }
     .hero__desc { font-size: 0.98rem; }
     .hero__actions .btn { padding: 14px 22px; font-size: 0.9rem; }
